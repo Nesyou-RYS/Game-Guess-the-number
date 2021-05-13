@@ -28,7 +28,7 @@ function createGame() {
 function gamePlay() {
     score++;
     let winCondition = 0;
-    countGuess.innerHTML = score;
+    innerHtml(countGuess, score);
     const numbers = document.querySelectorAll(".number");
     for (let i = 0; i < numbers.length; i++) {
         if (numbers[i].value == numbers[i].correct) {
@@ -80,8 +80,8 @@ function reload() {
     location.reload();
 }
 
-function addClass(element, color) {
-    element.classList.add(color);
+function addClass(element, value) {
+    element.classList.add(value);
 }
 
 function innerHtml(element, text) {
